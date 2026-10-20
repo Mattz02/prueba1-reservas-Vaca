@@ -21,6 +21,22 @@ para tener dónde trabajar con mi grupo.
    reserva queda registrada a mi nombre.
 2. **Dado** que elijo como inicio las 10:00 y como fin las 09:00, **Cuando** intento reservar,
    **Entonces** la reserva se rechaza con el mensaje "La hora de fin debe ser posterior a la de inicio".
+3. **Dado** que existe una reserva de 09:00 a 10:00 en la sala A, **Cuando** intento reservar la
+   sala A de 09:30 a 10:30, **Entonces** la reserva se rechaza con el mensaje "La sala ya está
+   reservada en ese horario".
+4. **Dado** que existe una reserva de 09:00 a 12:00 en la sala A, **Cuando** intento reservar la
+   sala A de 10:00 a 11:00, **Entonces** la reserva se rechaza con el mensaje "La sala ya está
+   reservada en ese horario".
+5. **Dado** que existe una reserva de 10:00 a 11:00 en la sala A, **Cuando** intento reservar la
+   sala A de 09:00 a 12:00, **Entonces** la reserva se rechaza con el mensaje "La sala ya está
+   reservada en ese horario".
+6. **Dado** que existe una reserva de 09:00 a 10:00 en la sala A, **Cuando** intento reservar la
+   sala A de 10:00 a 11:00, **Entonces** la reserva queda registrada.
+7. **Dado** que existe una reserva de 09:00 a 10:00 en la sala A, **Cuando** intento reservar la
+   sala B de 09:30 a 10:30, **Entonces** la reserva queda registrada.
+8. **Dado** que existe una reserva de 09:00 a 10:00 en la sala A, **Cuando** intento reservar la
+   sala A de 09:00 a 10:00, **Entonces** la reserva se rechaza con el mensaje "La sala ya está
+   reservada en ese horario".
 
 ### Edge Cases
 
